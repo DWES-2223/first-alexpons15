@@ -12,15 +12,15 @@ $quantitat = $_POST['quantitat'];
 <?php
 if (isset($quantitat) && $quantitat > 0) { ?>
     <h2>Formularis per a <?= $quantitat ?> persones</h2>
-    <form method="post" action="">
+    <form method="post" action="237.php">
         <?php
         for ($i = 1; $i <= $quantitat; $i++) { ?>
             <label for="nom<?= $i ?>">Nom:</label><br>
-            <input type="text" id="nom<?= $i ?>" name="nom<?= $i ?>"><br>
+            <input type="text" id="nom<?= $i ?>" name="noms[]"><br>
             <label for="altura<?= $i ?>">Alçada:</label><br>
-            <input type="text" id="altura<?= $i ?>" name="altura<?= $i ?>"><br>
+            <input type="text" id="altura<?= $i ?>" name="altures[]"><br>
             <label for="email<?= $i ?>">Email:</label><br>
-            <input type="text" id="email<?= $i ?>" name="email<?= $i ?>"><br>
+            <input type="text" id="email<?= $i ?>" name="emails[]"><br>
             <br>
             <?php
         }
