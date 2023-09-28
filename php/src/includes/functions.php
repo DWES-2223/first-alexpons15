@@ -96,11 +96,11 @@ function llevaDavant(int $num, int $cant): int {
     return intval($resultat);
 }
 
-function peseta2euros(int $quantitat, float $cotitzacio = 0.006024096): float {
+function peseta2euros(int $quantitat, float $cotitzacio = 0.00601012): float {
     return convertir($quantitat, $cotitzacio);
 }
 
-function euro2pesetes(int $quantitat, float $cotitzacio = 166.0): float {
+function euro2pesetes(int $quantitat, float $cotitzacio = 166.386): float {
     return convertir($quantitat, $cotitzacio);
 }
 

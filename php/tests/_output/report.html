@@ -210,14 +210,14 @@
  <body>
    <ul id="toolbar-filter">
      <li> <a href="#" title="Show all" onClick="showAllScenarios()">◯</a></li>
-     <li> <a href="#" title="Successful" onClick="toggleScenarios('scenarioSuccess', this.parentElement)"><strong>✔</strong> 12</a></li>
-     <li> <a href="#" title="Failed" onClick="toggleScenarios('scenarioFailed', this.parentElement)"><strong>✗</strong> 4</a></li>
+     <li> <a href="#" title="Successful" onClick="toggleScenarios('scenarioSuccess', this.parentElement)"><strong>✔</strong> 11</a></li>
+     <li> <a href="#" title="Failed" onClick="toggleScenarios('scenarioFailed', this.parentElement)"><strong>✗</strong> 5</a></li>
      <li> <a href="#" title="Skipped" onClick="toggleScenarios('scenarioSkipped', this.parentElement)"><strong>S</strong> 0</a></li>
      <li> <a href="#" title="Incomplete" onClick="toggleScenarios('scenarioIncomplete', this.parentElement)"><strong>I</strong> 0</a></li>
      <li> <a href="#" title="Useless" onClick="toggleScenarios('scenarioUseless', this.parentElement)"><strong>U</strong> 0</a></li>
    </ul>
  <div class="layout">
- <h1>Codeception Results <small><span style="color: #e74c3c">FAILED</span> (00:00.248)</small></h1>
+ <h1>Codeception Results <small><span style="color: #e74c3c">FAILED</span> (00:00.269)</small></h1>
 
 
 
@@ -226,15 +226,15 @@
  <td>
      <h3>Acceptance Tests</h3>
  </td>
-</tr>   <tr class="scenarioRow scenarioSuccess">
+</tr>   <tr class="scenarioRow scenarioFailed">
     <td>
-     <p class="scenarioSuccess" onclick="showHide('1', this)"><span class="toggle">+</span>
-          <span class="quiet">FuncionsCest &raquo;</span> Try243 works test <span style="color: #34495e; font-size: 70%;">0.05s</span></p>
+     <p class="scenarioFailed" onclick="showHide('1', this)"><span class="toggle">+</span>
+          <span class="quiet">FuncionsCest &raquo;</span> Try243 works test <span style="color: #34495e; font-size: 70%;">0.04s</span></p>
     </td>
    </tr>
-   <tr class="scenarioRow scenarioSuccess">
+   <tr class="scenarioRow scenarioFailed">
     <td>
-     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer1">
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer1">
 
 
       <tr>
@@ -254,13 +254,21 @@
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see in field <span style="color: #732E81">&quot;pesetes&quot;,&quot;1660&quot;</span></td>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I see in field <span style="color: #732E81">&quot;pesetes&quot;,&quot;1660&quot;</span></td>
       </tr>
 
 
+         <tr >
+    <td class="error">
+        Failed asserting that `1660` is in input's value: array (<br />
+  0 => '1663.86',<br />
+)<br />
+Failed asserting that an array contains '1660'.
+    </td>
+</tr>
+
          
-         
-         
+         <tr><td class='error'>See <a href='FuncionsCest.try243WorksTest.fail.html' target='_blank'>HTML snapshot</a> of a failed page</td></tr>
      </table>
 
 
@@ -291,7 +299,7 @@
          <tr >
     <td class="error">
         Failed asserting that on page /244a.php<br />
---> File not found. <br />
+-->  Exercici 244a Introdueix una quantitat vàlida de productes per a generar el formulari <br />
 --> contains "Dades incorrectes".
     </td>
 </tr>
@@ -308,7 +316,7 @@
    <tr class="scenarioRow scenarioFailed">
     <td>
      <p class="scenarioFailed" onclick="showHide('3', this)"><span class="toggle">+</span>
-          <span class="quiet">FuncionsCest &raquo;</span> Try245 works test <span style="color: #34495e; font-size: 70%;">0s</span></p>
+          <span class="quiet">FuncionsCest &raquo;</span> Try245 works test <span style="color: #34495e; font-size: 70%;">0.01s</span></p>
     </td>
    </tr>
    <tr class="scenarioRow scenarioFailed">
@@ -345,7 +353,7 @@
    <tr class="scenarioRow scenarioFailed">
     <td>
      <p class="scenarioFailed" onclick="showHide('4', this)"><span class="toggle">+</span>
-          <span class="quiet">FuncionsCest &raquo;</span> Try246 works test <span style="color: #34495e; font-size: 70%;">0s</span></p>
+          <span class="quiet">FuncionsCest &raquo;</span> Try246 works test <span style="color: #34495e; font-size: 70%;">0.01s</span></p>
     </td>
    </tr>
    <tr class="scenarioRow scenarioFailed">
@@ -380,7 +388,7 @@
    <tr class="scenarioRow scenarioFailed">
     <td>
      <p class="scenarioFailed" onclick="showHide('5', this)"><span class="toggle">+</span>
-          <span class="quiet">FuncionsCest &raquo;</span> Try251 works test <span style="color: #34495e; font-size: 70%;">0.01s</span></p>
+          <span class="quiet">FuncionsCest &raquo;</span> Try251 works test <span style="color: #34495e; font-size: 70%;">0s</span></p>
     </td>
    </tr>
    <tr class="scenarioRow scenarioFailed">
@@ -445,7 +453,7 @@
    <tr class="scenarioRow scenarioSuccess">
     <td>
      <p class="scenarioSuccess" onclick="showHide('7', this)">
-          <span class="quiet">FunctionsTest &raquo;</span> Test240array aleatori <span style="color: #34495e; font-size: 70%;">0s</span></p>
+          <span class="quiet">FunctionsTest &raquo;</span> Test240array aleatori <span style="color: #34495e; font-size: 70%;">0.01s</span></p>
     </td>
    </tr>
    <tr class="scenarioRow scenarioSuccess">
@@ -670,11 +678,11 @@
       <table border="0">
        <tr>
         <td width="250" class="scenarioSuccess">Successful scenarios:</td>
-        <td class="scenarioSuccessValue"><strong>12</strong></td>
+        <td class="scenarioSuccessValue"><strong>11</strong></td>
        </tr>
        <tr>
         <td class="scenarioFailed">Failed scenarios:</td>
-        <td class="scenarioFailedValue"><strong>4</strong></td>
+        <td class="scenarioFailedValue"><strong>5</strong></td>
        </tr>
        <tr>
         <td class="scenarioSkipped">Skipped scenarios:</td>

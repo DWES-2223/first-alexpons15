@@ -75,13 +75,13 @@ class FunctionsTest extends \Codeception\Test\Unit
     }
 
     public function test243peseta2Euros(){
-        $this->assertEquals(1,peseta2euros(166));
-        $this->assertEquals(100,peseta2euros(16600));
+        $this->assertEquals(1,peseta2euros(166.38));
+        $this->assertEquals(100,peseta2euros(16638));
     }
 
     public function test243euro2Pesetes(){
-        $this->assertEquals(166,euro2pesetes(1));
-        $this->assertEquals(16600,euro2pesetes(100));
+        $this->assertEquals(166.39,euro2pesetes(1));
+        $this->assertEquals(16638.6,euro2pesetes(100));
     }
 
     /*
