@@ -95,3 +95,21 @@ function llevaDavant(int $num, int $cant): int {
     $resultat = substr($numCadena, -(strlen($numCadena) - $cant));
     return intval($resultat);
 }
+
+function peseta2euros(int $quantitat, float $cotitzacio = 0.006024096): float {
+    return convertir($quantitat, $cotitzacio);
+}
+
+function euro2pesetes(int $quantitat, float $cotitzacio = 166.0): float {
+    return convertir($quantitat, $cotitzacio);
+}
+
+function convertir(int $quantitat, float $cotitzacio): float {
+    $resultat = $quantitat * $cotitzacio;
+    if (floor($resultat) === $resultat) {
+        $resultatCadena = number_format($resultat, 0, '.', '');
+    } else {
+        $resultatCadena = number_format($resultat, 2, '.', '');
+    }
+    return floatval($resultatCadena);
+}
