@@ -2,7 +2,6 @@
 
 class BuclesCest
 {
-
     /*
     public function _before(AcceptanceTester $I)
     {

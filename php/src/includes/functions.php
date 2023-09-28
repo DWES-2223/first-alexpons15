@@ -43,11 +43,55 @@ function concatenar(...$paraules) : String {
     if (count($paraules) == 0) {
         return 'No has introduït cap paraula';
     } else {
+        /*
         $resposta = '';
         foreach ($paraules as $paraula) {
             $resposta .= ' ' . $paraula;
         }
-        //return implode(' ', $paraules);
         return $resposta;
+        */
+        return implode(' ', $paraules);
     }
+}
+
+function digits(int $num): int {
+    $numCadena = strval($num);
+    if (strpos($numCadena, '-') !== false) {
+        $numCadena = str_replace('-', '', $numCadena);
+    }
+    return strlen($numCadena);
+}
+function digitsN(int $num, int $post): int {
+    $numCadena = strval($num);
+
+    if (strlen($numCadena) < $post) {
+        return 0;
+    }
+
+    $post--;
+
+    if (strpos($numCadena, '-') !== false) {
+        $numCadena = str_replace('-', '', $numCadena);
+    }
+    return intval($numCadena[$post]);
+}
+function llevaDarrere(int $num, int $cant): int {
+    $numCadena = strval($num);
+
+    if ($cant >= strlen($numCadena)) {
+        return 0;
+    }
+
+    $resultat = substr($numCadena, 0, strlen($numCadena) - $cant);
+    return intval($resultat);
+}
+function llevaDavant(int $num, int $cant): int {
+    $numCadena = strval($num);
+
+    if ($cant >= strlen($numCadena)) {
+        return 0;
+    }
+
+    $resultat = substr($numCadena, -(strlen($numCadena) - $cant));
+    return intval($resultat);
 }

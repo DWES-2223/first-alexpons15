@@ -14,4 +14,4 @@ echo '<pre>';
 print_r($array);
 echo '</pre>';
 
-echo "<p>Els paràmetres de l'array anterior concatenats són: " . concatenar(...$array);
+echo "<p>Els paràmetres de l'array anterior concatenats són: " . concatenar(...$array) . "</p>";

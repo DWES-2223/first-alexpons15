@@ -9,7 +9,7 @@ class FunctionsTest extends \Codeception\Test\Unit
     
     protected function _before()
     {
-        include_once('./src/functions.php');
+        include_once('./src/includes/functions.php');
     }
 
     protected function _after()
@@ -42,7 +42,7 @@ class FunctionsTest extends \Codeception\Test\Unit
         $this->assertEquals(10,major(1,2,3,4,5,6,7,8,9,10));
     }
     public function test241Concatenar(){
-        $this->assertEquals('Hola mundo',concatenar('Hola','mundo'));
+        $this->assertEquals('Hola mundo', concatenar('Hola','mundo'));
     }
 
     public function test242Digits(){

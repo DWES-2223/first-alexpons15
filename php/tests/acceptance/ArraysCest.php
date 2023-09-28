@@ -3,9 +3,7 @@
 class ArraysCest
 {
     /*
-    public function _before(AcceptanceTester $I)
-    {
-    }
+    public function _before(AcceptanceTester $I) {}
 
 
     public function try230WorksTest(AcceptanceTester $I)
@@ -32,7 +30,6 @@ class ArraysCest
         $I->amOnPage('/234.php');
 
         $I->seeInSource('<table> <thead> <tr> <th>Nom</th> <th>Alçada</th> </tr> </thead>');
-
     }
 
     public function try235WorksTest(AcceptanceTester $I)
@@ -40,8 +37,6 @@ class ArraysCest
         $I->amOnPage('/235.php');
 
         $I->seeInSource('<table> <thead> <tr> <th>Nom</th> <th>Alçada</th> <th>Email</th> </tr> </thead>');
-
     }
     */
-
 }
