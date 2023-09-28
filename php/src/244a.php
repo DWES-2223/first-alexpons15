@@ -16,16 +16,16 @@ if (isset($quantitat) && is_numeric($quantitat) && $quantitat > 0) { ?>
         for ($i = 1; $i <= $quantitat; $i++) { ?>
             <label for="nom<?= $i ?>">Nom <?= $i ?>:</label><br>
             <input type="text" id="nom<?= $i ?>" name="noms[]"><br>
-            <label for="cost<?= $i ?>">Cost <?= $i ?>:</label><br>
-            <input type="text" id="cost<?= $i ?>" name="costos[]"><br>
+            <label for="preu<?= $i ?>">Preu <?= $i ?>:</label><br>
+            <input type="number" id="preu<?= $i ?>" name="preus[]"><br>
             <?php
         }
         ?>
-        <input type="submit" value="Enviar">
+        <input type="submit" id="submit" value="Enviar">
     </form>
     <?php
 } else {
-    echo '<p>Introdueix una quantitat vàlida de productes per a generar el formulari</p>';
+    echo '<p>Dades incorrectes</p>';
 }
 ?>
 </body>

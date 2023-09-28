@@ -11,7 +11,7 @@ extract($_POST);
 </head>
 <body>
 <?php
-if (isset($noms, $costos)) {
+if (isset($noms, $preus)) {
     ?>
     <table>
         <thead>
@@ -25,12 +25,12 @@ if (isset($noms, $costos)) {
         <?php
         $total = 0.0;
         for ($i = 0; $i < count($noms); $i++) {
-            $total += $costos[$i];
+            $total += $preus[$i];
             ?>
             <tr>
                 <td><?= $noms[$i] ?></td>
-                <td><?= $costos[$i] ?></td>
-                <td><?= euro2pesetes($costos[$i]) ?></td>
+                <td><?= $preus[$i] ?></td>
+                <td><?= euro2pesetes($preus[$i]) ?></td>
             </tr>
             <?php
         }

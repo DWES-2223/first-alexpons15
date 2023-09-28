@@ -12,7 +12,7 @@ class FuncionsCest
         $I->fillField('euros', '10');
         $I->click('submit');
         $I->seeInCurrentUrl('/243.php');
-        $I->seeInField('pesetes',"1660");
+        $I->seeInField('pesetes',"1663.86");
     }
 
     public function try244WorksTest(AcceptanceTester $I)
@@ -22,24 +22,23 @@ class FuncionsCest
         $I->amOnPage('/244a.php?quantitat=hola');
         $I->see('Dades incorrectes');
         $I->amOnPage('/244a.php?quantitat=2');
-        $I->fillField('nom0', 'Pa');
-        $I->fillField('nom1', 'Oli');
-        $I->fillField('preu0', '1.5');
-        $I->fillField('preu1', '0.5');
+        $I->fillField('#nom1', 'Pa');
+        $I->fillField('#nom2', 'Oli');
+        $I->fillField('#preu1', '1.5');
+        $I->fillField('#preu2', '0.5');
         $I->click('submit');
         $I->seeInCurrentUrl('/244b.php');
         $I->see('249');
         $I->see('83');
         $I->see('332');
         $I->amOnPage('/244a.php?quantitat=2');
-        $I->fillField('nom0', 'Pa');
-        $I->fillField('nom1', 'Oli');
-        $I->fillField('preu0', '1.5');
-        $I->fillField('preu1', 'hola');
+        $I->fillField('#nom1', 'Pa');
+        $I->fillField('#nom2', 'Oli');
+        $I->fillField('#preu1', '1.5');
+        $I->fillField('#preu2', 'hola');
         $I->click('submit');
         $I->seeInCurrentUrl('/244b.php');
-        $I->see('249');
-
+        $I->see('249.58');
     }
 
     public function try245WorksTest(AcceptanceTester $I)
