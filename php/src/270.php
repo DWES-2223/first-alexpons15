@@ -6,6 +6,9 @@
 </head>
 <body>
 <h1>Rècords registrats d'atletisme</h1>
-<?php include_once('270a.php')?>
+<?php
+$records = include_once('atletes.php');
+include_once('270a.php');
+?>
 </body>
 </html>

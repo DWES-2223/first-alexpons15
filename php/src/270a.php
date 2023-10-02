@@ -1,6 +1,3 @@
-<?php
-$records = include_once('atletes.php');
-?>
 <style>
     table {
         width: 100%;
