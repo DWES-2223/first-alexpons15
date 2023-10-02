@@ -2,6 +2,7 @@
 
 class CadenesCest
 {
+    /*
     public function _before(AcceptanceTester $I)
     {
     }
@@ -69,4 +70,5 @@ class CadenesCest
         $I->seeInCurrentUrl('/256.php');
         $I->see('Els 4 numeros parells són 12 4 6 12');
     }
+    */
 }

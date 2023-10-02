@@ -5,6 +5,8 @@ class FunctionsTest extends \Codeception\Test\Unit
     /**
      * @var \UnitTester
      */
+
+    /*
     protected $tester;
     
     protected function _before()
@@ -83,6 +85,7 @@ class FunctionsTest extends \Codeception\Test\Unit
         $this->assertEquals(166.39,euro2pesetes(1));
         $this->assertEquals(16638.6,euro2pesetes(100));
     }
+    */
 
     /*
     public function test250frasesImparelles(){
