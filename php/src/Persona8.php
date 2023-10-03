@@ -7,7 +7,8 @@ class Persona8 {
     public function __construct(
         private string $nom,
         private string $cognoms,
-        private int $edat = 25) {}
+        private int $edat = 25)
+    {}
 
     public function getNom(): string
     {
