@@ -9,7 +9,7 @@ class ExamenTest extends \Codeception\Test\Unit
     
     protected function _before()
     {
-        include_once('./src/functions.php');
+        include_once('./src/includes/funcionsActivitats.php');
     }
 
     public function test270a(){
@@ -41,5 +41,4 @@ class ExamenTest extends \Codeception\Test\Unit
     public function test273Any(){
         $this->assertEquals('1999', any('01.12.1999'));
     }
-
 }

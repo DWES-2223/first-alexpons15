@@ -210,14 +210,14 @@
  <body>
    <ul id="toolbar-filter">
      <li> <a href="#" title="Show all" onClick="showAllScenarios()">◯</a></li>
-     <li> <a href="#" title="Successful" onClick="toggleScenarios('scenarioSuccess', this.parentElement)"><strong>✔</strong> 2</a></li>
-     <li> <a href="#" title="Failed" onClick="toggleScenarios('scenarioFailed', this.parentElement)"><strong>✗</strong> 1</a></li>
+     <li> <a href="#" title="Successful" onClick="toggleScenarios('scenarioSuccess', this.parentElement)"><strong>✔</strong> 9</a></li>
+     <li> <a href="#" title="Failed" onClick="toggleScenarios('scenarioFailed', this.parentElement)"><strong>✗</strong> 0</a></li>
      <li> <a href="#" title="Skipped" onClick="toggleScenarios('scenarioSkipped', this.parentElement)"><strong>S</strong> 0</a></li>
      <li> <a href="#" title="Incomplete" onClick="toggleScenarios('scenarioIncomplete', this.parentElement)"><strong>I</strong> 0</a></li>
      <li> <a href="#" title="Useless" onClick="toggleScenarios('scenarioUseless', this.parentElement)"><strong>U</strong> 0</a></li>
    </ul>
  <div class="layout">
- <h1>Codeception Results <small><span style="color: #e74c3c">FAILED</span> (00:00.236)</small></h1>
+ <h1>Codeception Results <small><span style="color: green">OK</span> (00:00.245)</small></h1>
 
 
 
@@ -229,7 +229,7 @@
 </tr>   <tr class="scenarioRow scenarioSuccess">
     <td>
      <p class="scenarioSuccess" onclick="showHide('1', this)"><span class="toggle">+</span>
-          <span class="quiet">ExamenCest &raquo;</span> Try270 works test <span style="color: #34495e; font-size: 70%;">0.04s</span></p>
+          <span class="quiet">ExamenCest &raquo;</span> Try270 works test <span style="color: #34495e; font-size: 70%;">0.03s</span></p>
     </td>
    </tr>
    <tr class="scenarioRow scenarioSuccess">
@@ -378,15 +378,15 @@
    </tr>
 
 
-   <tr class="scenarioRow scenarioFailed">
+   <tr class="scenarioRow scenarioSuccess">
     <td>
-     <p class="scenarioFailed" onclick="showHide('3', this)"><span class="toggle">+</span>
+     <p class="scenarioSuccess" onclick="showHide('3', this)"><span class="toggle">+</span>
           <span class="quiet">ExamenCest &raquo;</span> Try272 works test <span style="color: #34495e; font-size: 70%;">0.01s</span></p>
     </td>
    </tr>
-   <tr class="scenarioRow scenarioFailed">
+   <tr class="scenarioRow scenarioSuccess">
     <td>
-     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer3">
+     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer3">
 
 
       <tr>
@@ -394,20 +394,37 @@
       </tr>
 
       <tr>
-       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I see <span style="color: #732E81">&quot;Record més antic: Altura&quot;</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see <span style="color: #732E81">&quot;Record més antic: Altura&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see <span style="color: #732E81">&quot;Club amb més títols: Playas de Castellón&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see <span style="color: #732E81">&quot;Persona amb més records: Bruno Hortelano Roig&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see <span style="color: #732E81">&quot;Ciutat més propicia: Mónaco&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see <span style="color: #732E81">&quot;Mes jove en aconsegir el record: Jordan Alejandro Diaz Fortún - 21 anys&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see in source <span style="color: #732E81">&quot;&lt;th&gt;Prova&lt;/th&gt; &lt;th&gt;Marca&lt;/th&gt; &lt;th&gt;Atleta&lt;/th&gt; &lt;th&gt;Natalici&lt;/th&gt; &lt;th&gt;Club&lt;/th&gt; &lt;th&gt;Data&lt;/th&gt; &lt;th&gt;Lloc&lt;/th&gt;&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see in source <span style="color: #732E81">&quot;&lt;tr&gt;\n&lt;td&gt;1.500&lt;/td&gt; &lt;td&gt;3:28.76&lt;/td&gt; &lt;td&gt;Mohamed Katir El Haouzi&lt;/td&gt; &lt;td&gt;1998&lt;/td&gt; &lt;td&gt;Playas de Castellón&lt;/td&gt; &lt;td&gt;09.07.2021&lt;/td&gt; &lt;td&gt;Mónaco&lt;/td&gt; &lt;/tr&gt;&quot;</span></td>
       </tr>
 
 
-         <tr >
-    <td class="error">
-        Failed asserting that on page /272.php<br />
---> File not found. <br />
---> contains "Record més antic: Altura".
-    </td>
-</tr>
-
          
-         <tr><td class='error'>See <a href='ExamenCest.try272WorksTest.fail.html' target='_blank'>HTML snapshot</a> of a failed page</td></tr>
+         
+         
      </table>
 
 
@@ -423,24 +440,19 @@
  <td>
      <h3>Unit Tests</h3>
  </td>
-</tr>   <tr class="scenarioRow scenarioFailed">
+</tr>   <tr class="scenarioRow scenarioSuccess">
     <td>
-     <p class="scenarioFailed" onclick="showHide('4', this)">
+     <p class="scenarioSuccess" onclick="showHide('4', this)">
           <span class="quiet">ExamenTest &raquo;</span> Test270a <span style="color: #34495e; font-size: 70%;">0.01s</span></p>
     </td>
    </tr>
-   <tr class="scenarioRow scenarioFailed">
+   <tr class="scenarioRow scenarioSuccess">
     <td>
-     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer4">
+     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer4">
 
 
 
-         <tr >
-    <td class="error">
-        include_once(./src/functions.php): Failed to open stream: No such file or directory at /var/www/php/tests/unit/ExamenTest.php:12
-    </td>
-</tr>
-
+         
          
          
      </table>
@@ -450,24 +462,19 @@
    </tr>
 
 
-   <tr class="scenarioRow scenarioFailed">
+   <tr class="scenarioRow scenarioSuccess">
     <td>
-     <p class="scenarioFailed" onclick="showHide('5', this)">
+     <p class="scenarioSuccess" onclick="showHide('5', this)">
           <span class="quiet">ExamenTest &raquo;</span> Test272 fec ing <span style="color: #34495e; font-size: 70%;">0s</span></p>
     </td>
    </tr>
-   <tr class="scenarioRow scenarioFailed">
+   <tr class="scenarioRow scenarioSuccess">
     <td>
-     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer5">
+     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer5">
 
 
 
-         <tr >
-    <td class="error">
-        include_once(./src/functions.php): Failed to open stream: No such file or directory at /var/www/php/tests/unit/ExamenTest.php:12
-    </td>
-</tr>
-
+         
          
          
      </table>
@@ -477,24 +484,19 @@
    </tr>
 
 
-   <tr class="scenarioRow scenarioFailed">
+   <tr class="scenarioRow scenarioSuccess">
     <td>
-     <p class="scenarioFailed" onclick="showHide('6', this)">
+     <p class="scenarioSuccess" onclick="showHide('6', this)">
           <span class="quiet">ExamenTest &raquo;</span> Test272 vell <span style="color: #34495e; font-size: 70%;">0s</span></p>
     </td>
    </tr>
-   <tr class="scenarioRow scenarioFailed">
+   <tr class="scenarioRow scenarioSuccess">
     <td>
-     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer6">
+     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer6">
 
 
 
-         <tr >
-    <td class="error">
-        include_once(./src/functions.php): Failed to open stream: No such file or directory at /var/www/php/tests/unit/ExamenTest.php:12
-    </td>
-</tr>
-
+         
          
          
      </table>
@@ -504,24 +506,19 @@
    </tr>
 
 
-   <tr class="scenarioRow scenarioFailed">
+   <tr class="scenarioRow scenarioSuccess">
     <td>
-     <p class="scenarioFailed" onclick="showHide('7', this)">
+     <p class="scenarioSuccess" onclick="showHide('7', this)">
           <span class="quiet">ExamenTest &raquo;</span> Test272 laureado <span style="color: #34495e; font-size: 70%;">0s</span></p>
     </td>
    </tr>
-   <tr class="scenarioRow scenarioFailed">
+   <tr class="scenarioRow scenarioSuccess">
     <td>
-     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer7">
+     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer7">
 
 
 
-         <tr >
-    <td class="error">
-        include_once(./src/functions.php): Failed to open stream: No such file or directory at /var/www/php/tests/unit/ExamenTest.php:12
-    </td>
-</tr>
-
+         
          
          
      </table>
@@ -531,24 +528,19 @@
    </tr>
 
 
-   <tr class="scenarioRow scenarioFailed">
+   <tr class="scenarioRow scenarioSuccess">
     <td>
-     <p class="scenarioFailed" onclick="showHide('8', this)">
+     <p class="scenarioSuccess" onclick="showHide('8', this)">
           <span class="quiet">ExamenTest &raquo;</span> Test273 jove <span style="color: #34495e; font-size: 70%;">0s</span></p>
     </td>
    </tr>
-   <tr class="scenarioRow scenarioFailed">
+   <tr class="scenarioRow scenarioSuccess">
     <td>
-     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer8">
+     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer8">
 
 
 
-         <tr >
-    <td class="error">
-        include_once(./src/functions.php): Failed to open stream: No such file or directory at /var/www/php/tests/unit/ExamenTest.php:12
-    </td>
-</tr>
-
+         
          
          
      </table>
@@ -558,24 +550,19 @@
    </tr>
 
 
-   <tr class="scenarioRow scenarioFailed">
+   <tr class="scenarioRow scenarioSuccess">
     <td>
-     <p class="scenarioFailed" onclick="showHide('9', this)">
+     <p class="scenarioSuccess" onclick="showHide('9', this)">
           <span class="quiet">ExamenTest &raquo;</span> Test273 any <span style="color: #34495e; font-size: 70%;">0s</span></p>
     </td>
    </tr>
-   <tr class="scenarioRow scenarioFailed">
+   <tr class="scenarioRow scenarioSuccess">
     <td>
-     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer9">
+     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer9">
 
 
 
-         <tr >
-    <td class="error">
-        include_once(./src/functions.php): Failed to open stream: No such file or directory at /var/www/php/tests/unit/ExamenTest.php:12
-    </td>
-</tr>
-
+         
          
          
      </table>
@@ -593,11 +580,11 @@
       <table border="0">
        <tr>
         <td width="250" class="scenarioSuccess">Successful scenarios:</td>
-        <td class="scenarioSuccessValue"><strong>2</strong></td>
+        <td class="scenarioSuccessValue"><strong>9</strong></td>
        </tr>
        <tr>
         <td class="scenarioFailed">Failed scenarios:</td>
-        <td class="scenarioFailedValue"><strong>1</strong></td>
+        <td class="scenarioFailedValue"><strong>0</strong></td>
        </tr>
        <tr>
         <td class="scenarioSkipped">Skipped scenarios:</td>
