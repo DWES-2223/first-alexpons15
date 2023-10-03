@@ -46,4 +46,20 @@ class Empleado extends Persona8 {
     public function debePagarImpuestos(): bool {
         return $this->sou > self::LIMIT_IMPOSTOS;
     }
+
+    public static function toHtml(Empleado $emp): string {
+        $cadena = '';
+        $nom = $emp->getNom();
+        $cognoms = $emp->getCognoms();
+
+        $cadena.= "<p>$nom $cognoms</p>";
+
+        $cadena .= PHP_EOL . "<ul>" . PHP_EOL;
+        foreach ($emp->getTelefons() as $telefon) {
+            $cadena .= "<li>$telefon</li>" . PHP_EOL;
+        }
+        $cadena .= '</ul>';
+
+        return $cadena;
+    }
 }
