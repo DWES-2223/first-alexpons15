@@ -1,5 +1,6 @@
 <?php
 class Persona8 {
+    const LIMITE_EDAT = 66;
     public function __construct(
         private string $nom,
         private string $cognoms,
@@ -40,6 +41,6 @@ class Persona8 {
     }
     
     public function estaJubilado(): bool {
-        return $this->edat >= 67;
+        return $this->edat >= self::LIMITE_EDAT;
     }
 }
