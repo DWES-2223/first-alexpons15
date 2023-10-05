@@ -2,13 +2,18 @@
 class Empleado extends Persona8 {
     const LIMIT_IMPOSTOS = 3333;
     public function __construct(
-        private float $sou,
-        private array $telefons,
         string $nom,
         string $cognoms,
+        private float $sou = 0.0,
+        private array $telefons = [],
         int $edat = null)
     {
-        parent::__construct($nom, $cognoms, $edat);
+        if ($edat != null) {
+            parent::__construct($nom, $cognoms, $edat);
+        } else {
+            parent::__construct($nom, $cognoms);
+        }
+
     }
 
     public function getSou(): float
