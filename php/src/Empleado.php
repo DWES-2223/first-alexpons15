@@ -54,17 +54,23 @@ class Empleado extends Persona8 {
         return $this->getSou() > self::LIMIT_IMPOSTOS;
     }
 
-    public static function toHtml(Persona8 $persona): string {
-        $cadena = Persona8::toHtml($persona);
-
-        if ($persona instanceof Empleado) {
-            $cadena .= PHP_EOL . "<ul>" . PHP_EOL;
-            foreach ($persona->getTelefons() as $telefon) {
-                $cadena .= "<li>$telefon</li>" . PHP_EOL;
-            }
-            $cadena .= '</ul>';
+    public function __toString(): string
+    {
+        $cadena = parent::__toString();
+        $cadena .= PHP_EOL . "<ul>" . PHP_EOL;
+        foreach ($this->getTelefons() as $telefon) {
+            $cadena .= "<li>$telefon</li>" . PHP_EOL;
         }
+        $cadena .= '</ul>';
 
         return $cadena;
+    }
+
+    public static function toHtml(Persona8 $persona): string {
+        if ($persona instanceof Empleado) {
+            return $persona->__toString();
+        } else {
+            return Persona8::toHtml($persona);
+        }
     }
 }

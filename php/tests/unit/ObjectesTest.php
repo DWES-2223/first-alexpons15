@@ -119,7 +119,11 @@ class ObjectesTest extends \Codeception\Test\Unit
         $persona = new Persona8('Pepe', 'Botera');
         $empleado->anyadirTelefono(12345678);
         $empleado->anyadirTelefono(87654321);
-        $this->assertEquals('<p>Ignasi Gomis Mullor</p><ul><li>12345678</li><li>87654321</li></ul>', $empleado->__toString());
+        $this->assertEquals('<p>Ignasi Gomis Mullor</p>
+<ul>
+<li>12345678</li>
+<li>87654321</li>
+</ul>', $empleado->__toString());
         $this->assertEquals('<p>Pepe Botera</p>', $persona->__toString());
 
     }
@@ -129,13 +133,21 @@ class ObjectesTest extends \Codeception\Test\Unit
         $empleado = new Employee(horasTrabajadas: 40, precioPorHora: 20, nombre: 'Ignasi', apellidos: 'Gomis Mullor', edat: '54');
         $empleado->anyadirTelefono(12345678);
         $empleado->anyadirTelefono(87654321);
-        $this->assertEquals('<p>Ignasi Gomis Mullor</p><ul><li>12345678</li><li>87654321</li></ul>', $empleado->__toString());
+        $this->assertEquals('<p>Ignasi Gomis Mullor</p>
+<ul>
+<li>12345678</li>
+<li>87654321</li>
+</ul>', $empleado->__toString());
         $this->assertEquals(800, $empleado->calcularSueldo());
         $this->assertEquals(false, $empleado->debePagarImpuestos());
         $empleado = new Manager(salari: 3000, nombre: 'Ignasi', apellidos: 'Gomis Mullor', edat: '54');
         $empleado->anyadirTelefono(12345678);
         $empleado->anyadirTelefono(87654321);
-        $this->assertEquals('<p>Ignasi Gomis Mullor</p><ul><li>12345678</li><li>87654321</li></ul>', $empleado->__toString());
+        $this->assertEquals('<p>Ignasi Gomis Mullor</p>
+<ul>
+<li>12345678</li>
+<li>87654321</li>
+</ul>', $empleado->__toString());
         $this->assertEquals(4620.0, $empleado->calcularSueldo());
         $this->assertEquals(true, $empleado->debePagarImpuestos());
     }
