@@ -210,14 +210,14 @@
  <body>
    <ul id="toolbar-filter">
      <li> <a href="#" title="Show all" onClick="showAllScenarios()">◯</a></li>
-     <li> <a href="#" title="Successful" onClick="toggleScenarios('scenarioSuccess', this.parentElement)"><strong>✔</strong> 10</a></li>
+     <li> <a href="#" title="Successful" onClick="toggleScenarios('scenarioSuccess', this.parentElement)"><strong>✔</strong> 11</a></li>
      <li> <a href="#" title="Failed" onClick="toggleScenarios('scenarioFailed', this.parentElement)"><strong>✗</strong> 0</a></li>
      <li> <a href="#" title="Skipped" onClick="toggleScenarios('scenarioSkipped', this.parentElement)"><strong>S</strong> 0</a></li>
      <li> <a href="#" title="Incomplete" onClick="toggleScenarios('scenarioIncomplete', this.parentElement)"><strong>I</strong> 0</a></li>
      <li> <a href="#" title="Useless" onClick="toggleScenarios('scenarioUseless', this.parentElement)"><strong>U</strong> 0</a></li>
    </ul>
  <div class="layout">
- <h1>Codeception Results <small><span style="color: #e74c3c">FAILED</span> (00:00.171)</small></h1>
+ <h1>Codeception Results <small><span style="color: #e74c3c">FAILED</span> (00:00.235)</small></h1>
 
 
 
@@ -237,7 +237,7 @@
 </tr>   <tr class="scenarioRow scenarioSuccess">
     <td>
      <p class="scenarioSuccess" onclick="showHide('1', this)">
-          <span class="quiet">ObjectesTest &raquo;</span> Test301 <span style="color: #34495e; font-size: 70%;">0.02s</span></p>
+          <span class="quiet">ObjectesTest &raquo;</span> Test301 <span style="color: #34495e; font-size: 70%;">0.01s</span></p>
     </td>
    </tr>
    <tr class="scenarioRow scenarioSuccess">
@@ -454,24 +454,19 @@
    </tr>
 
 
-   <tr class="scenarioRow scenarioFailed">
+   <tr class="scenarioRow scenarioSuccess">
     <td>
-     <p class="scenarioFailed" onclick="showHide('11', this)">
-          <span class="quiet">ObjectesTest &raquo;</span> Test311 <span style="color: #34495e; font-size: 70%;">0.01s</span></p>
+     <p class="scenarioSuccess" onclick="showHide('11', this)">
+          <span class="quiet">ObjectesTest &raquo;</span> Test311 <span style="color: #34495e; font-size: 70%;">0s</span></p>
     </td>
    </tr>
-   <tr class="scenarioRow scenarioFailed">
+   <tr class="scenarioRow scenarioSuccess">
     <td>
-     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer11">
+     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer11">
 
 
 
-         <tr >
-    <td class="error">
-        Class "Enterprise" not found
-    </td>
-</tr>
-
+         
          
          
      </table>
@@ -484,7 +479,7 @@
    <tr class="scenarioRow scenarioFailed">
     <td>
      <p class="scenarioFailed" onclick="showHide('12', this)">
-          <span class="quiet">ObjectesTest &raquo;</span> Test312 <span style="color: #34495e; font-size: 70%;">0s</span></p>
+          <span class="quiet">ObjectesTest &raquo;</span> Test312 <span style="color: #34495e; font-size: 70%;">0.01s</span></p>
     </td>
    </tr>
    <tr class="scenarioRow scenarioFailed">
@@ -516,7 +511,7 @@
       <table border="0">
        <tr>
         <td width="250" class="scenarioSuccess">Successful scenarios:</td>
-        <td class="scenarioSuccessValue"><strong>10</strong></td>
+        <td class="scenarioSuccessValue"><strong>11</strong></td>
        </tr>
        <tr>
         <td class="scenarioFailed">Failed scenarios:</td>

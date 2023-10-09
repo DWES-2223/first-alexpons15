@@ -18,7 +18,7 @@ class ObjectesTest extends \Codeception\Test\Unit
         include_once('./src/MyWorker.php');
         include_once('./src/Manager.php');
         include_once('./src/Employee.php');
-        //include_once('./src/Enterprise.php');
+        include_once('./src/Enterprise.php');
 
     }
 
@@ -159,7 +159,12 @@ class ObjectesTest extends \Codeception\Test\Unit
         $empresa = new Enterprise('CIP FP BATOI', 'Serreta 8');
         $empresa->addWorker($empleado);
         $empresa->addWorker($manager);
-        $this->assertEquals('<div><p>Pepe Botera</p><p>Ignasi Gomis Mullor</p></div>', $empresa->listWorkersHtml());
+        $this->assertEquals('<p>Pepe Botera</p>
+<ul>
+</ul>
+<p>Ignasi Gomis Mullor</p>
+<ul>
+</ul>', $empresa->listWorkersHtml());
         $this->assertEquals($empleado->calcularSueldo() + $manager->calcularSueldo(), $empresa->getCosteNominas());
     }
 
