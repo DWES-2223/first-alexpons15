@@ -7,9 +7,9 @@ abstract class Person
     private static int $limite_edat = self::LIMITE_EDAT;
 
     public function __construct(
-        private string $nom,
-        private string $cognoms,
-        private int    $edat = 25)
+        protected string $nom,
+        protected string $cognoms,
+        protected int    $edat = 25)
     {
     }
 

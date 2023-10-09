@@ -7,8 +7,8 @@ abstract class MyWorker extends Person {
     public function __construct(
         string        $nom,
         string        $cognoms,
-        private float $sou = 0.0,
-        private array $telefons = [],
+        protected float $sou = 0.0,
+        protected array $telefons = [],
         int           $edad = null)
     {
         if ($edad != null) {

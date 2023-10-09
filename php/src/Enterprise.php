@@ -1,7 +1,7 @@
 <?php
 declare(strict_types = 1);
 
-class Enterprise {
+class Enterprise implements JSerializable {
     private string $nom;
     private string $direccio;
     private array $treballadors;
@@ -52,5 +52,19 @@ class Enterprise {
             $total += $treballador->calcularSueldo();
         }
         return $total;
+    }
+
+    public function toJSON(): string
+    {
+        $mapa = [];
+        foreach ($this as $clave => $valor) {
+            $mapa[$clave] = $valor;
+        }
+        return json_encode($mapa);
+    }
+
+    public function toSerialize(): string
+    {
+        return serialize($this);
     }
 }

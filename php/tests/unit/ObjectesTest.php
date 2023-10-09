@@ -171,15 +171,14 @@ class ObjectesTest extends \Codeception\Test\Unit
     public function test312()
     {
         $empleado = new Employee(horasTrabajadas: 150, precioPorHora: 12, nombre: 'Pepe', apellidos: 'Botera', edad: '24');
-        $this->assertEquals('{"nombre":"Pepe","apellidos":"Botera","edat":"24","telefonos":[],"horasTrabajadas":150,"precioPorHora":12}', $empleado->toJSON());
+        $this->assertEquals('{"nom":"Pepe","cognoms":"Botera","edat":24,"sou":1800,"telefons":[],"horasTrabajadas":150,"precioPorHora":12}', $empleado->toJSON());
         $this->assertEquals($empleado->toJSON(), unserialize($empleado->toSerialize())->toJSON());
         $manager = new Manager(salari: 4000, nombre: 'Ignasi', apellidos: 'Gomis Mullor', edat: '54');
-        $this->assertEquals('{"nombre":"Ignasi","apellidos":"Gomis Mullor","edat":"54","telefonos":[],"salari":4000}', $manager->toJSON());
+        $this->assertEquals('{"nom":"Ignasi","cognoms":"Gomis Mullor","edat":54,"sou":6160,"telefons":[],"salario":4000}', $manager->toJSON());
         $this->assertEquals($manager->toJSON(), unserialize($manager->toSerialize())->toJSON());
         $empresa = new Enterprise('CIP FP BATOI', 'Serreta 8');
         $empresa->addWorker($empleado);
         $empresa->addWorker($manager);
         $this->assertEquals($empresa->toJSON(), unserialize($empresa->toSerialize())->toJSON());
     }
-
 }

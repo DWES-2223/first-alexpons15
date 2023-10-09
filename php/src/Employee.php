@@ -1,7 +1,7 @@
 <?php
 declare(strict_types = 1);
 
-class Employee extends MyWorker {
+class Employee extends MyWorker implements JSerializable {
     private int $horasTrabajadas;
     private float $precioPorHora;
 
@@ -35,5 +35,19 @@ class Employee extends MyWorker {
 
     public function calcularSueldo(): float {
         return $this->getHorasTrabajadas() * $this->getPrecioPorHora();
+    }
+
+    public function toJSON(): string
+    {
+        $mapa = [];
+        foreach ($this as $clave => $valor) {
+            $mapa[$clave] = $valor;
+        }
+        return json_encode($mapa);
+    }
+
+    public function toSerialize(): string
+    {
+        return serialize($this);
     }
 }
