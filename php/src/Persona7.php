@@ -1,4 +1,6 @@
 <?php
+declare(strict_types = 1);
+
 class Persona7 {
     private string $nom;
     private string $cognoms;
@@ -41,10 +43,10 @@ class Persona7 {
     }
 
     public function getNombreCompleto(): string {
-        return $this->nom . ' ' . $this->cognoms;
+        return $this->getNom() . ' ' . $this->getCognoms();
     }
-    
+
     public function estaJubilado(): bool {
-        return $this->edat >= 67;
+        return $this->getEdat() >= 67;
     }
 }

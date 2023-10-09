@@ -1,7 +1,9 @@
 <?php
+declare(strict_types = 1);
+
 class Persona8 {
-    const LIMITE_EDAT = 66;
-    public static int $limite_edat = self::LIMITE_EDAT;
+    public const LIMITE_EDAT = 66;
+    private static int $limite_edat = self::LIMITE_EDAT;
 
     public function __construct(
         private string $nom,
@@ -40,14 +42,23 @@ class Persona8 {
     }
 
     public function getNombreCompleto(): string {
-        return $this->nom . ' ' . $this->cognoms;
+        return $this->getNom() . ' ' . $this->getCognoms();
     }
-    
+
     public function estaJubilado(): bool {
-        return $this->edat >= self::$limite_edat;
+        return $this->getEdat() >= self::$limite_edat;
     }
 
     public static function modificaLimite(int $nouLimitEdat): void {
         self::$limite_edat = $nouLimitEdat;
+    }
+
+    public static function toHtml(Persona8 $persona): string {
+        $cadena = '';
+        $nom = $persona->getNom();
+        $cognoms = $persona->getCognoms();
+
+        $cadena.= "<p>$nom $cognoms</p>";
+        return $cadena;
     }
 }

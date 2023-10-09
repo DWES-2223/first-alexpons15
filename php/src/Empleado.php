@@ -1,6 +1,9 @@
 <?php
+declare(strict_types = 1);
+
 class Empleado extends Persona8 {
-    const LIMIT_IMPOSTOS = 3333;
+    public const LIMIT_IMPOSTOS = 3333;
+
     public function __construct(
         string $nom,
         string $cognoms,
@@ -13,7 +16,6 @@ class Empleado extends Persona8 {
         } else {
             parent::__construct($nom, $cognoms);
         }
-
     }
 
     public function getSou(): float
@@ -41,29 +43,27 @@ class Empleado extends Persona8 {
     }
 
     public function listarTelefonos(): string {
-        return implode(',', $this->telefons);
+        return implode(',', $this->getTelefons());
     }
 
     public function vaciarTelefonos(): void {
-        $this->telefons = array();
+        $this->telefons = [];
     }
 
     public function debePagarImpuestos(): bool {
-        return $this->sou > self::LIMIT_IMPOSTOS;
+        return $this->getSou() > self::LIMIT_IMPOSTOS;
     }
 
-    public static function toHtml(Empleado $emp): string {
-        $cadena = '';
-        $nom = $emp->getNom();
-        $cognoms = $emp->getCognoms();
+    public static function toHtml(Persona8 $persona): string {
+        $cadena = Persona8::toHtml($persona);
 
-        $cadena.= "<p>$nom $cognoms</p>";
-
-        $cadena .= PHP_EOL . "<ul>" . PHP_EOL;
-        foreach ($emp->getTelefons() as $telefon) {
-            $cadena .= "<li>$telefon</li>" . PHP_EOL;
+        if ($persona instanceof Empleado) {
+            $cadena .= PHP_EOL . "<ul>" . PHP_EOL;
+            foreach ($persona->getTelefons() as $telefon) {
+                $cadena .= "<li>$telefon</li>" . PHP_EOL;
+            }
+            $cadena .= '</ul>';
         }
-        $cadena .= '</ul>';
 
         return $cadena;
     }
