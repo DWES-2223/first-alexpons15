@@ -68,6 +68,15 @@ abstract class MyWorker extends Person {
         return $cadena;
     }
 
+    public function toJSON(): string
+    {
+        $mapa = [];
+        foreach ($this as $clave => $valor) {
+            $mapa[$clave] = $valor;
+        }
+        return json_encode($mapa);
+    }
+
     public static function toHtml(Person $persona): string {
         return $persona->__toString();
     }

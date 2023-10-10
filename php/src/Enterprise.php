@@ -58,6 +58,11 @@ class Enterprise implements JSerializable {
     {
         $mapa = [];
         foreach ($this as $clave => $valor) {
+            if (is_array($valor)) {
+                foreach ($valor as $worker) {
+                    $mapa[$clave][] = $worker->toJSON();
+                }
+            }
             $mapa[$clave] = $valor;
         }
         return json_encode($mapa);
